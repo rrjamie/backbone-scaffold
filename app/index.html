@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>App Scaffold</title>
+    </head>
+
+    <body>
+        <!-- Container for App -->
+        <div id="app-container">
+        </div>
+
+        <script src="lib/require.js"></script>
+        <script>
+            /* Loads Config, App */
+            require(["config"], function() {
+                require(["app"], function(App) {
+                    /* The root prefix for the project should be set manually.
+                     * Here we set it for compatibility with the app/, build/ prefixes
+                     * used by the scaffold */
+
+                    var path = window.location.pathname;
+                    var root;
+                    if (path == '/') {
+                        root = '/';
+                    } else {
+                        root = window.location.pathname.split("/").slice(0, 2).join('/') + '/';
+                    }
+
+
+                    App.init('app-container', {root: root});
+                });
+            });
+        </script>
+    </body>
+</html>

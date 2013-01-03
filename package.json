@@ -1,0 +1,19 @@
+{
+  "name": "app-scaffold",
+  "version": "0.0.0",
+  "description": "Scaffold for Backbone+Requirejs Apps",
+  "main": "app/index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "requirejs": "~2.1.2",
+    "serve": "~1.1.0"
+  }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tests</title>
+
+
+
+        <!-- QUnit -->
+        <link rel="stylesheet" href="lib/qunit/qunit.css">
+        <script src="lib/qunit/qunit.js"></script>
+        
+        <!-- Require.js Loader -->
+        <script src="../app/lib/require.js"></script>
+
+        <!-- Bootstrap Tests -->
+        <script>
+            /* List your test modules here */
+            var TESTS = window.TESTS = [
+                "tests/app"
+            ];
+
+            window._loaded_tests = false;
+
+            (function() {
+                QUnit.config.autostart = false;
+
+                var startedLoading = false;
+                var loadTests = function() {
+                    if (startedLoading) return;
+                    startedLoading = true;
+
+                    require(['../app/config'], function() {
+                        // Fix baseURL
+                        require.config({baseUrl: '../app'});
+
+                        require(TESTS, function() {
+                            window._loaded_tests = true;
+
+                            QUnit.start();
+                        });
+                    });
+                };
+
+                window.addEventListener("load", loadTests, true);
+            })();
+        </script>
+    </head>
+
+    <body>
+        <!-- QUnit UI -->
+        <div id="qunit"></div>
+        <div id="qunit-fixture"></div>
+
+        <div id="fixtures">
+            <!-- Fixtures Go Here -->
+        </div>
+    </body>
+</html>

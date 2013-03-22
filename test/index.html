@@ -10,13 +10,13 @@
         <script src="lib/qunit/qunit.js"></script>
         
         <!-- Require.js Loader -->
-        <script src="../app/lib/require.js"></script>
+        <script src="../app/lib/requirejs/require.js"></script>
 
         <!-- Bootstrap Tests -->
         <script>
             /* List your test modules here */
             var TESTS = window.TESTS = [
-                "tests/app"
+                "test/app"
             ];
 
             window._loaded_tests = false;
@@ -31,7 +31,12 @@
 
                     require(['../app/config'], function() {
                         // Fix baseURL
-                        require.config({baseUrl: '../app'});
+                        require.config({
+                            baseUrl: '../app',
+                            paths: {
+                                "test": "../test"
+                            }
+                        });
 
                         require(TESTS, function() {
                             window._loaded_tests = true;

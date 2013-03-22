@@ -4,3 +4,12 @@
 
 /node_modules/
 /build/
+
+/vendor/backbone/backbone.js
+/vendor/coffee-script/coffee-script.js
+/vendor/dustjs/dust-core.js
+/vendor/dustjs/dust-full.js
+/vendor/jquery/jquery.js
+/vendor/json/json.js
+/vendor/lodash/lodash.js
+/vendor/requirejs/require.js

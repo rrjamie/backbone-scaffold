@@ -3,23 +3,20 @@
  */
 require.config({
     "paths": {
-        "json2": "./lib/json2",
+        "json": "./lib/json/json",
 
-        "jquery": "./lib/jquery/jquery-v1.8.3",
-        "underscore": "./lib/lodash/lodash-v1.0.0-rc.3",
-        "backbone": "./lib/backbone/backbone-v0.9.9",
+        "jquery": "./lib/jquery/jquery",
+        "underscore": "./lib/lodash/lodash",
+        "backbone": "./lib/backbone/backbone",
         
         // Templates
-        "handlebars": "./lib/handlebars/handlebars-1.0.rc.1",
-        "hbs": "./lib/handlebars/hbs",
-        "i18nprecompile": "./lib/handlebars/i18nprecompile",
-
-        // Tests
-        "tests": "../tests",
+        "dust": "./lib/dustjs/requirejs-plugin",
+        "dust-core": "./lib/dustjs/dust-core",
+        "dust-full": "./lib/dustjs/dust-full",
 
         // CoffeeScript Support
-        "coffee-script": "./lib/coffee-script/coffee-script-v1.4.0",
-        "cs": "./lib/coffee-script/requirecs"
+        "cs": "./lib/coffee-script/requirejs-plugin",
+        "coffee-script": "./lib/coffee-script/coffee-script"
     },
 
     "shim": {
@@ -28,17 +25,17 @@ require.config({
             "exports": "Backbone"
         },
 
-        "handlebars": {
-            "exports": "Handlebars"
+        "json": {
+            "exports": "JSON"
         },
 
-        "json2": {
-            "exports": "JSON"
-        }
-    },
+        "dust-core": {
+            "exports": "dust"
+        },
 
-    "hbs": {
-        "i18nDirectory": "templates/i18n/"
+        "dust-full": {
+            "exports": "dust"
+        }
     }
 });
 

@@ -1,8 +1,8 @@
-define ["backbone", "hbs!templates/main"], (Backbone, template) ->
+define ["backbone", "dust!templates/main"], (Backbone, template) ->
     class MainView extends Backbone.View
         template: template
 
         render: () ->
-            @$el.html @template(message: "Hello World")
+            @template message: "Hello World", (err, html) => @$el.html html
 
     MainView

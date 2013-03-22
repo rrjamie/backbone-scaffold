@@ -1,0 +1,28 @@
+[submodule "vendor/backbone/repo"]
+	path = vendor/backbone/repo
+	url = git@github.com:documentcloud/backbone.git
+    ignore = dirty
+[submodule "vendor/coffee-script/repo"]
+	path = vendor/coffee-script/repo
+	url = git@github.com:jashkenas/coffee-script.git
+    ignore = dirty
+[submodule "vendor/dustjs/repo"]
+	path = vendor/dustjs/repo
+	url = git@github.com:rrjamie/dustjs.git
+    ignore = dirty
+[submodule "vendor/jquery/repo"]
+	path = vendor/jquery/repo
+    url = git@github.com:jquery/jquery.git
+    ignore = dirty
+[submodule "vendor/json/repo"]
+	path = vendor/json/repo
+    url = git@github.com:douglascrockford/JSON-js.git
+    ignore = dirty
+[submodule "vendor/lodash/repo"]
+	path = vendor/lodash/repo
+	url = git@github.com:bestiejs/lodash.git
+    ignore = dirty
+[submodule "vendor/requirejs/repo"]
+	path = vendor/requirejs/repo
+    url = git@github.com:jrburke/requirejs.git
+    ignore = dirty
